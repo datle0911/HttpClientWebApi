@@ -30,7 +30,7 @@ public class ResourcesController
     }
 
     [HttpPost("Anonymous")]
-    public async Task<HttpResponseMessage> Post(Customer customer)
+    public async Task<Response> Post(Customer customer)
     {
         var result = await _basicUsageService.CreateCustomerAsync(customer);
 

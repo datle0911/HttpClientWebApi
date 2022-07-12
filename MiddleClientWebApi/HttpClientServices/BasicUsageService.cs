@@ -24,13 +24,16 @@ public class BasicUsageService
         return null;
     }
 
-    public async Task<HttpResponseMessage> CreateCustomerAsync(Customer customer)
+    public async Task<Response> CreateCustomerAsync(Customer customer)
     {
         // Create Client
         var client = _httpClientFactory.CreateClient();
 
         var response = await client.PostAsJsonAsync("https://deliverywebapi.azurewebsites.net/api/customers", customer);
+        //response.Content.ReadAsStringAsync().Wait();
+        //Console.WriteLine(response.Content);
 
-        return response;
+        var result = new Response(response.Content, (Int32)response.StatusCode);
+        return result;
     }
 }
