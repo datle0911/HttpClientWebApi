@@ -29,6 +29,14 @@ public class ResourcesController
         return result;
     }
 
+    [HttpPost("Anonymous")]
+    public async Task<HttpResponseMessage> Post(Customer customer)
+    {
+        var result = await _basicUsageService.CreateCustomerAsync(customer);
+
+        return result;
+    }
+
     [HttpGet("NamedClient")]
     public async Task<JokeTale> GetByNamedClient()
     {

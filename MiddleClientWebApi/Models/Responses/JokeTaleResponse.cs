@@ -1,4 +1,4 @@
-﻿namespace MiddleClientWebApi.Models;
+﻿namespace MiddleClientWebApi.Models.Responses;
 
 public class JokeTaleResponse
 {

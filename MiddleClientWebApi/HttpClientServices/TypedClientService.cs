@@ -13,7 +13,7 @@ public class TypedClientService
     {
         // No need to create Client
 
-        var response = await _httpClient.GetFromJsonAsync<JokeTaleResponse>("http://api.icndb.com/jokes/random?limitTo=[nerdy]");
+        var response = await _httpClient.GetFromJsonAsync<JokeTaleResponse>("http://api.icndb.com/jokes/random");
 
         if (response?.Value.Joke is not null)
         {

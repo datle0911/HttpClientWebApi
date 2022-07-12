@@ -3,6 +3,7 @@
 global using Refit;
 
 global using MiddleClientWebApi.Models;
+global using MiddleClientWebApi.Models.Responses;
 global using MiddleClientWebApi.Controllers;
 global using MiddleClientWebApi.HttpClientServices;
 global using MiddleClientWebApi.Interfaces;
